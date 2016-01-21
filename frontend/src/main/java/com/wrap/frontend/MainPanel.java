@@ -24,22 +24,11 @@ public class MainPanel extends JPanel {
         }
          
 
-        JButton button = new JButton("Button 2 (CENTER)");
-        button.setPreferredSize(new Dimension(200, 100));
-        add(button, BorderLayout.CENTER);
-    
-        
-		String	listData[] =
-		{
-			"Item 1",
-			"Item 2",
-			"Item 3",
-			"Item 4"
-		};
 
-		// Create a new listbox control
-		JList listbox = new JList( listData );
-		add( listbox, BorderLayout.LINE_END );
+        add(new GamePanel(), BorderLayout.CENTER);
+    
+
+		add( new ScoreBoard(), BorderLayout.LINE_END );
 
         
         
