@@ -32,7 +32,7 @@ public class DeterminerTest
     }
 
     /**
-     * Rigourous Test :-)
+     * test stand off
      */
     public void testStandOff()
     {
