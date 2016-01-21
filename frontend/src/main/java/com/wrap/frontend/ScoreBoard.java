@@ -45,43 +45,9 @@ public class ScoreBoard extends JPanel {
 	}
 
 	class MyTableModel extends AbstractTableModel {
-		private String[] columnNames = { "You", "Comp", "Win" };
+		private String[] columnNames = { "You", "Comp" };
 		private Object[][] data = {
-				{ "Kathy", "Smith", "Snowboarding" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "John", "Doe", "Rowing" }, 
-				{ "Sue", "Black", "Knitting" },
-				{ "Jane", "White", "Speed reading" },
-				{ "Joe", "Brown", "Pool" } 
+				{ "Kathy", "Smith" }
 				};
 
 		public int getColumnCount() {
