@@ -1,5 +1,8 @@
 package com.wrap.backend;
 
+import com.wrap.backend.constant.Action;
+import com.wrap.backend.constant.Deteminer;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -7,7 +10,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class DeterminerTest 
     extends TestCase
 {
     /**
@@ -15,7 +18,7 @@ public class AppTest
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
+    public DeterminerTest( String testName )
     {
         super( testName );
     }
@@ -25,14 +28,16 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( DeterminerTest.class );
     }
 
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testStandOff()
     {
-        assertTrue( true );
+    	for(int i = 0;i<5;i++){
+    		assertEquals(Deteminer.play(i, i), Action.standoff);
+    	}
     }
 }
