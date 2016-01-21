@@ -1,5 +1,9 @@
 package com.wrap.frontend;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.util.ResourceBundle;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -11,6 +15,7 @@ public class App
 {
     public static void main( String[] args )
     {
+    	
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI();
@@ -26,15 +31,17 @@ public class App
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("“Rock, Paper, Scissors, Spock, Lizard");
+        JFrame frame = new JFrame("Rock, Paper, Scissors, Spock, Lizard");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
-        //Add the ubiquitous "Hello World" label.
-        JLabel label = new JLabel("Rock, Paper, Scissors, Spock, Lizard");
-        frame.getContentPane().add(label);
+        frame.setPreferredSize(new Dimension(800, 400));
+        frame.getContentPane().add(new MainPanel());
  
+
+        
         //Display the window.
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 }
