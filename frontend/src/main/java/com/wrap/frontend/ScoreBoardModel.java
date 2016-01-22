@@ -49,4 +49,7 @@ public class ScoreBoardModel extends AbstractTableModel {
 		comp.add(0,compSym);
 		this.fireTableDataChanged();
 	}
+	public  List<Symbols> getPlayerHistory(){
+		return you;
+	}
 }

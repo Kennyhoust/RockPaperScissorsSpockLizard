@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
 import com.wrap.backend.constant.Computer;
+import com.wrap.backend.constant.Deteminer;
 import com.wrap.backend.constant.Symbols;
 
 public class DisplayPanel extends JPanel implements ActionListener {
@@ -41,13 +42,15 @@ public class DisplayPanel extends JPanel implements ActionListener {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawString(you==null?"":you.name(), 90, 90);
+		if(you!=null&&comp!=null)
+			g.drawString(Deteminer.play(you.getValue(), comp.getValue()).name(), 270, 90);
 		g.drawString(comp==null?"":comp.name(), 450, 90);
 	}
 
 	public void actionPerformed(ActionEvent event) {
 		SymbolButton SymbolButton = (SymbolButton)event.getSource();
 		you=SymbolButton.getSym();
-		comp = Computer.getSymbols();
+		comp = Computer.getSymbols(ScoreBoardModel.getInstance().getPlayerHistory());
 		ScoreBoardModel.getInstance().add(you, comp);
         showAnt();
 	}
