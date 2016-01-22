@@ -2,7 +2,7 @@ package com.wrap.backend.constant;
 
 public class Deteminer {
 
-	private static Action DETERMINER[][] = new Action[5][5];
+	public static Action DETERMINER[][] = new Action[5][5];
 	static {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
@@ -20,9 +20,7 @@ public class Deteminer {
 			DETERMINER[Symbols.LIZARD.getValue()][Symbols.SPOCK.getValue()] = Action.poisons;
 		}
 	}
-	public static Action play(int play,int crpty){
-		return DETERMINER[play][crpty];
-	}
+
 
 
 }

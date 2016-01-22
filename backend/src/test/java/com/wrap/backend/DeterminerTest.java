@@ -31,13 +31,5 @@ public class DeterminerTest
         return new TestSuite( DeterminerTest.class );
     }
 
-    /**
-     * test stand off
-     */
-    public void testStandOff()
-    {
-    	for(int i = 0;i<5;i++){
-    		assertEquals(Deteminer.play(i, i), Action.standoff);
-    	}
-    }
+
 }
