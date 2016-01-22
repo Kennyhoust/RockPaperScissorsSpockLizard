@@ -27,12 +27,13 @@ public class GamePanel extends JPanel implements ActionListener{
 	public GamePanel(){
 		this.setLayout(new BorderLayout());
         
-        //Create the "cards".
+		displayPanel = new DisplayPanel(this);
         JPanel card1 = new JPanel();
         List<Symbols> symbolsList =Arrays.asList(Symbols.values());
         for(Symbols sym:symbolsList){
         	SymbolButton symBtn = new SymbolButton(sym); 
-        	symBtn.addActionListener(this );
+        	symBtn.addActionListener(this);
+        	symBtn.addActionListener(displayPanel);
 			card1.add(symBtn);
         }
         
@@ -44,16 +45,13 @@ public class GamePanel extends JPanel implements ActionListener{
         cards.add(card1, BUTTONPANEL);
         cards.add(card2, TEXTPANEL);
         
-        displayPanel = new DisplayPanel(this);
+        
         
 		add(displayPanel, BorderLayout.CENTER);
         add(cards, BorderLayout.PAGE_END);
 	}
 	public void actionPerformed(ActionEvent event) {
-		SymbolButton SymbolButton = (SymbolButton)event.getSource();
-		System.out.println(SymbolButton.getSym().name());
         changeLayout(TEXTPANEL);
-        displayPanel.showAnt();
 	}
 	public void changeLayout(String name) {
 		CardLayout cl = (CardLayout)(cards.getLayout());
