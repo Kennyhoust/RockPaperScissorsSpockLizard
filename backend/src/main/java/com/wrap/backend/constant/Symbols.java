@@ -1,15 +1,20 @@
 package com.wrap.backend.constant;
 
-public final class Symbols {
-	public final static int ROCK = 0;
-	public final static int PAPER = 1;
-	public final static int SCISSORS = 2;
-	public final static int SPOCK = 3;
-	public final static int LIZARD = 4;
-	
-	
+public enum Symbols {
+	ROCK(0),
+	PAPER(1),
+	SCISSORS (2),
+	SPOCK( 3),
+	LIZARD(4);
+    private final int value;
 
+    private Symbols(int value) {
+        this.value = value;
+    }
 
+    public int getValue() {
+        return value;
+    }	
 
 	
 }

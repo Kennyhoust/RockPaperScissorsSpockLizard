@@ -8,16 +8,16 @@ public class Deteminer {
 			for (int j = 0; j < 5; j++) {
 				DETERMINER[i][j] = Action.standoff;
 			}
-			DETERMINER[Symbols.ROCK][Symbols.SCISSORS] = Action.crushes;
-			DETERMINER[Symbols.ROCK][Symbols.LIZARD] = Action.crushes;
-			DETERMINER[Symbols.PAPER][Symbols.ROCK] = Action.covers;
-			DETERMINER[Symbols.PAPER][Symbols.SPOCK] = Action.disaproves;
-			DETERMINER[Symbols.SCISSORS][Symbols.PAPER] = Action.cuts;
-			DETERMINER[Symbols.SCISSORS][Symbols.LIZARD] = Action.decapitates;
-			DETERMINER[Symbols.SPOCK][Symbols.ROCK] = Action.vaporizes;
-			DETERMINER[Symbols.SPOCK][Symbols.SCISSORS] = Action.smashes;
-			DETERMINER[Symbols.LIZARD][Symbols.PAPER] = Action.eats;
-			DETERMINER[Symbols.LIZARD][Symbols.SPOCK] = Action.poisons;
+			DETERMINER[Symbols.ROCK.getValue()][Symbols.SCISSORS.getValue()] = Action.crushes;
+			DETERMINER[Symbols.ROCK.getValue()][Symbols.LIZARD.getValue()] = Action.crushes;
+			DETERMINER[Symbols.PAPER.getValue()][Symbols.ROCK.getValue()] = Action.covers;
+			DETERMINER[Symbols.PAPER.getValue()][Symbols.SPOCK.getValue()] = Action.disaproves;
+			DETERMINER[Symbols.SCISSORS.getValue()][Symbols.PAPER.getValue()] = Action.cuts;
+			DETERMINER[Symbols.SCISSORS.getValue()][Symbols.LIZARD.getValue()] = Action.decapitates;
+			DETERMINER[Symbols.SPOCK.getValue()][Symbols.ROCK.getValue()] = Action.vaporizes;
+			DETERMINER[Symbols.SPOCK.getValue()][Symbols.SCISSORS.getValue()] = Action.smashes;
+			DETERMINER[Symbols.LIZARD.getValue()][Symbols.PAPER.getValue()] = Action.eats;
+			DETERMINER[Symbols.LIZARD.getValue()][Symbols.SPOCK.getValue()] = Action.poisons;
 		}
 	}
 	public static Action play(int play,int crpty){
