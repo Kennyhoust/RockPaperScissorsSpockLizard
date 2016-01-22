@@ -22,31 +22,41 @@ public class GamePanel extends JPanel implements ActionListener{
     
     final static String BUTTONPANEL = "Card with JButtons";
     final static String TEXTPANEL = "Card with JTextField";
+	private DisplayPanel displayPanel;
+	JPanel cards;
 	public GamePanel(){
 		this.setLayout(new BorderLayout());
-        JPanel cards; //a panel that uses CardLayout
+        
         //Create the "cards".
         JPanel card1 = new JPanel();
         List<Symbols> symbolsList =Arrays.asList(Symbols.values());
         for(Symbols sym:symbolsList){
         	SymbolButton symBtn = new SymbolButton(sym); 
+        	symBtn.addActionListener(this );
 			card1.add(symBtn);
         }
         
         
         JPanel card2 = new JPanel();
-        card2.add(new JTextField("TextField", 20));
+        card2.add(new JLabel("Waiting"));
          
-        //Create the panel that contains the "cards".
         cards = new JPanel(new CardLayout());
         cards.add(card1, BUTTONPANEL);
         cards.add(card2, TEXTPANEL);
         
-        add(new DisplayPanel(), BorderLayout.CENTER);
+        displayPanel = new DisplayPanel(this);
+        
+		add(displayPanel, BorderLayout.CENTER);
         add(cards, BorderLayout.PAGE_END);
 	}
 	public void actionPerformed(ActionEvent event) {
 		SymbolButton SymbolButton = (SymbolButton)event.getSource();
-		System.out.println(SymbolButton.getSym().getValue());
+		System.out.println(SymbolButton.getSym().name());
+        changeLayout(TEXTPANEL);
+        displayPanel.showAnt();
+	}
+	public void changeLayout(String name) {
+		CardLayout cl = (CardLayout)(cards.getLayout());
+        cl.show(cards, name);
 	}
 }
