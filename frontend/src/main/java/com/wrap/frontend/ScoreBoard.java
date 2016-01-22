@@ -12,10 +12,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
-/**
- * TableDemo is just like SimpleTableDemo, except that it uses a custom
- * TableModel.
- */
+
 public class ScoreBoard extends JPanel {
 	private boolean DEBUG = false;
 

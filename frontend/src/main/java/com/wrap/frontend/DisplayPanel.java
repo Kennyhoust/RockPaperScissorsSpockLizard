@@ -41,13 +41,14 @@ public class DisplayPanel extends JPanel implements ActionListener {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawString(you==null?"":you.name(), 90, 90);
-		g.drawString(comp==null?"":comp.name(), 180, 90);
+		g.drawString(comp==null?"":comp.name(), 450, 90);
 	}
 
 	public void actionPerformed(ActionEvent event) {
 		SymbolButton SymbolButton = (SymbolButton)event.getSource();
 		you=SymbolButton.getSym();
 		comp = Computer.getSymbols();
+		ScoreBoardModel.getInstance().add(you, comp);
         showAnt();
 	}
 }
