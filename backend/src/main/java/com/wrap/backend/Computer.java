@@ -34,12 +34,15 @@ public class Computer {
 		else
 			resultSym=this.getDefaultSym();
 		Symbols counterparty = findCounterparty(resultSym);
+		printDebugMessage();
+		
+		return 	counterparty;
+	}
+	public void printDebugMessage() {
 		System.out.println("==========");
 		for(Map.Entry<Symbols, Integer> sym:hisgram.entrySet()){
 			System.out.println(sym.getKey()+":"+sym.getValue());
 		}
-		
-		return 	counterparty;
 	}
 	public Symbols getDefaultSym() {
 		List<Symbols> symbolsList =Arrays.asList(Symbols.values());
@@ -59,7 +62,6 @@ public class Computer {
 		}
 	}
 	private boolean isHightest(Symbols symbols) {
-		// TODO Auto-generated method stub
 		return symbols.equals(highestsymbol);
 	}
 	public Symbols findCounterparty(Symbols resultSym){
