@@ -35,7 +35,7 @@
    <version>1.1.1</version>  
    <executions>  
     <execution>  
-     <phase>wrapIT</phase>  
+     <phase>install</phase>  
      <goals>  
       <goal>java</goal>  
      </goals>  
@@ -45,6 +45,12 @@
     </execution>  
    </executions>  
   </plugin>  
- </plugins>  
+ </plugins>      
+	<resources>
+        <resource>
+            <directory>src/resource</directory>
+            <targetPath>../classes</targetPath>
+        </resource>
+    </resources>
 </build>
 </project>
