@@ -1,4 +1,4 @@
-package com.wrap.backend.constant;
+package com.wrap.backend;
 
 public class Deteminer {
 

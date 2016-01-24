@@ -1,7 +1,7 @@
 package com.wrap.backend;
 
-import com.wrap.backend.constant.Action;
-import com.wrap.backend.constant.Deteminer;
+import com.wrap.backend.Action;
+import com.wrap.backend.Deteminer;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
