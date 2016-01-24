@@ -6,7 +6,12 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 import com.wrap.backend.Symbols;
-
+/**
+ * 
+ * 
+ * @author Kenny
+ *	Score Board Data store in here
+ */
 public class ScoreBoardModel extends AbstractTableModel {
 	private String[] columnNames = { "You", "Comp", "Win" };
 	private List<Symbols> you = new ArrayList<Symbols>();

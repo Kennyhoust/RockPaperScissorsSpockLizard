@@ -1,17 +1,22 @@
 package com.wrap.frontend;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableCellRenderer;
-
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
+
+/**
+ * 
+ * 
+ * 
+ * @author Kenny
+ * score board main layout and color
+ */
 
 public class ScoreBoard extends JPanel {
 	private boolean DEBUG = false;

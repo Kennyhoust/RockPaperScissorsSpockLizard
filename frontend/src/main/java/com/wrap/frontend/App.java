@@ -8,8 +8,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- * Hello world!
+ * 
+ * 
+ * @author Kenny
  *
+ * start of program
  */
 public class App 
 {
@@ -36,8 +39,6 @@ public class App
  
         frame.setPreferredSize(new Dimension(800, 400));
         frame.getContentPane().add(new MainPanel());
- 
-
         
         //Display the window.
         frame.pack();

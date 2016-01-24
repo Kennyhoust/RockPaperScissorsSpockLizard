@@ -1,18 +1,14 @@
 package com.wrap.frontend;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-
+/**
+ * 
+ * 
+ * @author Kenny
+ * Main screen layout
+ */
 public class MainPanel extends JPanel {
 	public static boolean RIGHT_TO_LEFT = false;
 	public MainPanel(){

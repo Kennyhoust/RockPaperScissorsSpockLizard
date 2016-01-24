@@ -2,22 +2,21 @@ package com.wrap.frontend;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-import com.wrap.backend.Deteminer;
 import com.wrap.backend.Symbols;
-
+/**
+ * 
+ * 
+ * @author Kenny
+ * all btns are located in here
+ */
 public class GamePanel extends JPanel implements ActionListener{
     
     final static String BUTTONPANEL = "Card with JButtons";
