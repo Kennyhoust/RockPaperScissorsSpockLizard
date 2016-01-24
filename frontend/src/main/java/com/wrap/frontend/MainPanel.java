@@ -32,8 +32,7 @@ public class MainPanel extends JPanel {
 
         
         
-        JLabel statusLabel = new JLabel("status");
-        statusLabel.setHorizontalAlignment(SwingConstants.LEFT);
-        add(statusLabel, BorderLayout.PAGE_END);
+
+        add(StatBar.getInstance(), BorderLayout.PAGE_END);
 	}
 }

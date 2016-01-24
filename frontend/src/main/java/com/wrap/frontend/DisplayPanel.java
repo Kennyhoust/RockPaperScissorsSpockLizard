@@ -89,18 +89,21 @@ public class DisplayPanel extends JPanel implements ActionListener {
 		you = SymbolButton.getSym();
 		comp = Computer.getInstance().getSymbols(
 				ScoreBoardModel.getInstance().getPlayerHistory());
-
+		StatBar.getInstance().refeshValue();
 		if (you == comp) {
 			result = 0;
+			StatBar.getInstance().addSO();
 		} else {
 			if (Deteminer.DETERMINER[you.getValue()][comp.getValue()] == Action.standoff) {
 				resultStr = Deteminer.DETERMINER[comp.getValue()][you
 						.getValue()].name();
 				result = -1;
+				StatBar.getInstance().addLose();
 			} else {
 				resultStr = Deteminer.DETERMINER[you.getValue()][comp
 						.getValue()].name();
 				result = 1;
+				StatBar.getInstance().addWin();
 			}
 		}
 		ScoreBoardModel.getInstance().add(you, comp, result);
