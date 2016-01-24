@@ -2,7 +2,7 @@ package com.wrap.frontend;
 
 import javax.swing.JButton;
 
-import com.wrap.backend.constant.Symbols;
+import com.wrap.backend.Symbols;
 
 public class SymbolButton extends JButton{
 	private Symbols sym;

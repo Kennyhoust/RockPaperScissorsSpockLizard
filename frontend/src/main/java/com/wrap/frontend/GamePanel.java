@@ -15,8 +15,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.wrap.backend.constant.Deteminer;
-import com.wrap.backend.constant.Symbols;
+import com.wrap.backend.Deteminer;
+import com.wrap.backend.Symbols;
 
 public class GamePanel extends JPanel implements ActionListener{
     
