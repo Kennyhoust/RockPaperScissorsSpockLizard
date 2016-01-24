@@ -49,6 +49,10 @@ public class GamePanel extends JPanel implements ActionListener{
 		add(displayPanel, BorderLayout.CENTER);
         add(cards, BorderLayout.PAGE_END);
 	}
+	/**
+	 * change layout after click btn
+	 * 
+	 */
 	public void actionPerformed(ActionEvent event) {
         changeLayout(TEXTPANEL);
 	}

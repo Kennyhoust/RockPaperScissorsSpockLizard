@@ -25,6 +25,18 @@ public class ScoreBoard extends JPanel {
 		super(new GridLayout(1, 0));
 
 		JTable table = new JTable(ScoreBoardModel.getInstance());
+		colorSetting(table);
+		table.setPreferredScrollableViewportSize(new Dimension(200, 70));
+		table.setFillsViewportHeight(true);
+
+		// Create the scroll pane and add the table to it.
+		JScrollPane scrollPane = new JScrollPane(table);
+
+		// Add the scroll pane to this panel.
+		add(scrollPane);
+	}
+
+	public void colorSetting(JTable table) {
 		table.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
 			@Override
 			public Component getTableCellRendererComponent(JTable table,
@@ -36,14 +48,6 @@ public class ScoreBoard extends JPanel {
 				return c;
 			}
 		});
-		table.setPreferredScrollableViewportSize(new Dimension(200, 70));
-		table.setFillsViewportHeight(true);
-
-		// Create the scroll pane and add the table to it.
-		JScrollPane scrollPane = new JScrollPane(table);
-
-		// Add the scroll pane to this panel.
-		add(scrollPane);
 	}
 
 
