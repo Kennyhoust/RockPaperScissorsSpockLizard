@@ -16,7 +16,7 @@ Additional achievements are or could be:
 
 
 # java version 1.7.0_75
-git clone https://github.com/Kennyhoust/WrapIT.git
+git clone https://github.com/Kennyhoust/RockPaperScissorsSpockLizard.git
 
 #go to  RockPaperScissorsSpockLizard/backend
 
