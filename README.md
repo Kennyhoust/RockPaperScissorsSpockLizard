@@ -18,11 +18,11 @@ Additional achievements are or could be:
 # java version 1.7.0_75
 git clone https://github.com/Kennyhoust/WrapIT.git
 
-#go to  WrapIT/backend
+#go to  RockPaperScissorsSpockLizard/backend
 
 mvn clean install
 
-#go to WrapIT/frontend
+#go to RockPaperScissorsSpockLizard/frontend
 
 mvn install
 
